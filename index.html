@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+
+  <style>
+    .myTable {
+      padding-top: 10.5%;
+      padding-bottom: 7%;
+      padding-left: 11.5%;
+      padding-right: 7%;
+      height: 100%;
+      width: 100%;
+      text-align: left;
+      table-layout:fixed
+    }
+
+    .myTable tr td {
+
+      vertical-align: text-top;
+      width: 100%;
+    }
+    .myTable button{
+      height: 70%;
+      width: 70%;
+      border: none;
+    }
+    .myButton{
+      background: none;
+    }
+    .blackChess{
+      background: url(blackChess.png);
+      background-size: cover;
+    }
+    .whiteChess{
+      background: url(whiteChess.png);
+      background-size: cover;
+    }
+  </style>
+</head>
+
+<body style="background-color: rgb(0, 0, 0);text-align: center;">
+  <h1 style="text-align: center;font-size: 50px;color: white;">黑白五子棋</h1>
+
+  <div style="background-color: rgb(0, 0, 0);">
+    <div
+      style="margin-left: auto;margin-right: auto;height: 800px;width: 800px;background: url(checkerBoard.jpg) center no-repeat;background-size: cover;">
+      <table class="myTable">
+        <tr>
+          <td><button id="1" onclick="PlayChess(id)" class="whiteChess"></button></td>
+          <td><button id="2" onclick="PlayChess(id)" class="myButton"></button></td>
+          <td><button id="3" onclick="PlayChess(id)" class="whiteChess"></button></td>
+          <td><button id="4" onclick="PlayChess(id)" class="myButton"></button></td>
+          <td><button id="5" onclick="PlayChess(id)" class="myButton"></button></td>
+        </tr>
+        <tr>
+          <td><button id="6" onclick="PlayChess(id)" class="blackChess"></button></td>
+          <td><button id="7" onclick="PlayChess(id)" class="whiteChess"></button></td>
+          <td><button id="8" onclick="PlayChess(id)" class="blackChess"></button></td>
+          <td><button id="9" onclick="PlayChess(id)" class="blackChess"></button></td>
+          <td><button id="10" onclick="PlayChess(id)" class="blackChess"></button></td>
+        </tr>
+        <tr>
+          <td><button id="11" onclick="PlayChess(id)" class="myButton"></button></td>
+          <td><button id="12" onclick="PlayChess(id)" class="blackChess"></button></td>
+          <td><button id="13" onclick="PlayChess(id)" class="whiteChess"></button></td>
+          <td><button id="14" onclick="PlayChess(id)" class="myButton"></button></td>
+          <td><button id="15" onclick="PlayChess(id)" class="myButton"></button></td>
+        </tr>
+        <tr>
+          <td><button id="16" onclick="PlayChess(id)" class="blackChess"></button></td>
+          <td><button id="17" onclick="PlayChess(id)" class="whiteChess"></button></td>
+          <td><button id="18" onclick="PlayChess(id)" class="blackChess"></button></td>
+          <td><button id="19" onclick="PlayChess(id)" class="whiteChess"></button></td>
+          <td><button id="20" onclick="PlayChess(id)" class="blackChess"></button></td>
+        </tr>
+        <tr>
+          <td><button id="21" onclick="PlayChess(id)" class="myButton"></button></td>
+          <td><button id="22" onclick="PlayChess(id)" class="whiteChess"></button></td>
+          <td><button id="23" onclick="PlayChess(id)" class="whiteChess"></button></td>
+          <td><button id="24" onclick="PlayChess(id)" class="whiteChess"></button></td>
+          <td><button id="25" onclick="PlayChess(id)" class="blackChess"></button></td>
+        </tr>
+        
+      </table>
+
+    </div>
+  </div>
+
+
+  <script>
+    var player = 0;
+    function PlayChess(id){
+      var element = document.getElementById(id);
+      if(player == 0 && element.className == "myButton")
+      {
+        element.className = "whiteChess";
+        player = 1;
+      }
+      else if(player == 1 && element.className == "myButton")
+      {
+        element.className = "blackChess";
+        player = 0;
+      }
+    }
+    
+    
+
+  </script>
+
+</body>
+
+
+</html>
